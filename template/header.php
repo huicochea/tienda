@@ -1,14 +1,15 @@
-﻿<!DOCTYPE html>
+<?php 
+	session_start();
+?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>TIENDA</title>
     <meta charset="utf-8">
     <meta name="format-detection" content="telephone=no"/>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-
     <script src="js/jquery.js"></script>
     <script src="js/jquery-migrate-1.2.1.js"></script>
 
@@ -22,7 +23,6 @@
     </div>
     <script src="js/html5shiv.js"></script>
     <![endif]-->
- 
     <script src='js/device.min.js'></script> 
 </head>
 
@@ -87,31 +87,3 @@
         </div>
 
     </header>
-
-    <div class="container">
-        <div class="row">
-          <div class="col-xs-12 col-sm-3  col-md-4  col-lg-1 ">.col-md-1</div>
-          <div class="col-xs-12 col-sm-3  col-md-4  col-lg-1 ">.col-md-1</div>
-          <div class="col-xs-12 col-sm-3  col-md-4  col-lg-1 ">.col-md-1</div>
-          <div class="col-xs-12 col-sm-3  col-md-4  col-lg-1 ">.col-md-1</div>
-          <div class="col-xs-12 col-sm-3  col-md-4  col-lg-1 ">.col-md-1</div>
-          <div class="col-xs-12 col-sm-3  col-md-4  col-lg-1 ">.col-md-1</div>
-          <div class="col-xs-12 col-sm-3  col-md-4  col-lg-1 ">.col-md-1</div>
-          <div class="col-xs-12 col-sm-3  col-md-4  col-lg-1 ">.col-md-1</div>
-          <div class="col-xs-12 col-sm-3  col-md-4  col-lg-1 ">.col-md-1</div>
-          <div class="col-xs-12 col-sm-3  col-md-4  col-lg-1 ">.col-md-1</div>
-          <div class="col-xs-12 col-sm-3  col-md-4  col-lg-1 ">.col-md-1</div>
-          <div class="col-xs-12 col-sm-3  col-md-4  col-lg-1 ">.col-md-1</div>
-        </div>
-    </div>
-
-    <!--========================================================
-                              FOOTER
-    =========================================================-->
-    <footer>
-        footer
-    </footer>
-</div>
-
-</body>
-</html>
