@@ -1,11 +1,12 @@
 <?php
 //Ver. 1.1 Mar-15
-	$tpl = new TemplatePower('template/subasta/consultaSubasta.tpl');
+	$tpl = new TemplatePower('template/productos/consulta.tpl');
 	$tpl->prepare();
 	$producto = new Producto($conn);
+    $tpl->assign('titulo', "Consulta productos");
 
 	$rowini    = 1;
-    $rowfin    = 12;
+    $rowfin    = 20;
     $totalrowstrajo = 0;
     if (!is_null($_GET['rini'])) {
         $rowini = $_GET['rini'];
@@ -37,48 +38,29 @@
 		$str.=" AND p.nombre like '%$buscar%' ";
 	}
 
+    $producto->lista_productos();
+    /*
 	$lista_productos = $producto->lista_productos($rowini, $rowfin , $str);
 	foreach ($lista_productos as $producto) {
 		$tpl->newBlock('producto');
 			$tpl->assign('id', $producto['id']);
-        	$tpl->assign('nombre', $producto['nombre']);
-        	$tpl->assign('descripcion', $producto['descripcion']);
-        	$tpl->assign('precio', $producto['precio_ini']);
-        	$tpl->assign('foto_muestra', $producto['foto_muestra']);
-        	$tpl->assign('foto', $producto['foto']);
+        	$tpl->assign('nombre', $producto['nombre']);        	
         $tpl->gotoBlock('producto');
         $totalrowstrajo = $totalrowstrajo + 1;
-	}
+	} */
 
-	$producto = new Producto($conn);
-	$lista_categorias = $producto->lista_categorias();
-	$aux = 1;
-	foreach ($lista_categorias as $categoria) {
-		$tpl->newBlock('categoria');
-        	$tpl->assign('id', $categoria['id']);
-        	$tpl->assign('nombre', $categoria['nombre']);
-        	if($aux==1){
-        		$tpl->assign('class', "odd");
-        		$aux=0;
-        	}
-        	else{
-        	    $tpl->assign('class', "even");
-        		$aux=1;	
-        	}
-        $tpl->gotoBlock('categoria');
-	}
 
-	$rowiniant = $rowini - 12;
-    $rowfinant = $rowfin - 12;
-    $rowinisig = $rowini + 12;
-    $rowfinsig = $rowfin + 12;
+	$rowiniant = $rowini - 20;
+    $rowfinant = $rowfin - 20;
+    $rowinisig = $rowini + 20;
+    $rowfinsig = $rowfin + 20;
 
   if ($rowini > 1) {
         $anterior = "<a href='control.php?mod=subasta&acc=con&rini=".$rowiniant."&rfin=".$rowfinant."&cat=".$cat."&buscar=".$buscar."'>Anterior</a>";
     } else {
         $anterior = '';
     }
-    if ($totalrowstrajo == 12 ) {
+    if ($totalrowstrajo == 20 ) {
     	$siguiente = "<a href='control.php?mod=subasta&acc=con&rini=".$rowinisig."&rfin=".$rowfinsig."&cat=".$cat."&buscar=".$buscar."'>Siguiente</a>";
     } else {
         $siguiente = "";

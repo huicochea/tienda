@@ -26,8 +26,9 @@ if(isset($mod)){
     //Productos
     if($mod == 'productos'){
       include("config/connect.php");
+      include("class/productos.php");
         if($acc == "con"){
-          
+            include("productos/consulta.php");
         }else if($acc == 'cal'){
 
         }else if($acc == 'admin'){

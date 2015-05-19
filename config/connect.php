@@ -2,7 +2,7 @@
 //Versión 1.0 29-Jul-13
 include("config.php");
 // Create connection
-$conn = mysqli_connect($servername, $username, $password);
+$conn = mysqli_connect($host_db, $usuario_db, $password_db);
 
 // Check connection
 if (!$conn) {

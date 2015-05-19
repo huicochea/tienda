@@ -44,7 +44,7 @@
                         <li>
                             <a href="control.php?mod=productos&acc=con">INICIO</a>
                         </li>
-                        <li class="active">
+                        <li>
                             <a href="control.php?mod=admin&acc=con">ADMINISTRAR</a>
                             <ul>
                                 <li>
