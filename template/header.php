@@ -32,29 +32,26 @@
                               HEADER
     =========================================================-->
     <header>
-
         <div id="stuck_container" class="stuck_container">
             <div class="container">
-
                 <div class="brand">
                     <h1 class="brand_name">
                         <a href="./">TIENDA</a>
                     </h1>
                 </div>
-
                 <nav class="nav">
                     <ul class="sf-menu">
                         <li>
-                            <a href="./">INICIO</a>
+                            <a href="control.php?mod=productos&acc=con">INICIO</a>
                         </li>
                         <li class="active">
-                            <a href="index-1.html">About</a>
+                            <a href="control.php?mod=admin&acc=con">ADMINISTRAR</a>
                             <ul>
                                 <li>
-                                    <a href="#">Quisque nulla</a>
+                                    <a href="#">PRODUCTOS</a>
                                 </li>
                                 <li>
-                                    <a href="#">Vestibulum libero</a>
+                                    <a href="#">TIENDAS</a>
                                     <ul>
                                         <li>
                                             <a href="#">Lorem</a>
@@ -73,13 +70,13 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="index-2.html">What We Do</a>
+                            <a href="control.php?mod=lugares&acc=con">LUGARES</a>
                         </li>
                         <li>
-                            <a href="index-3.html">Menu</a>
+                            <a href="control.php?mod=promociones&acc=con">PROMOCIONES</a>
                         </li>
                         <li>
-                            <a href="index-4.html">Contacts</a>
+                            <a href="control.php?mod=contacto&acc=con">CONTACTO</a>
                         </li>
                     </ul>
                 </nav>
