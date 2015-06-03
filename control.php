@@ -36,6 +36,44 @@ if(isset($mod)){
        }
       include("config/disconnect.php");
     }
+
+
+    //Administrar
+    if($mod == 'admin'){
+      include("config/connect.php");
+      include("class/productos.php");
+        if($acc == "con"){
+            include("admin/consulta.php");
+        }else if($acc == 'cal'){
+
+        }
+      include("config/disconnect.php");
+    }
+
+    //Estados
+    if($mod == 'estados'){
+      include("config/connect.php");
+      include("class/estados.php");
+        if($acc == "con"){
+            include("estados/consulta.php");
+        }else if($acc == 'cal'){
+
+        }
+      include("config/disconnect.php");
+    }
+
+    //municipios
+    if($mod == 'municipios'){
+      include("config/connect.php");
+      include("class/municipios.php");
+        if($acc == "con"){
+            include("municipios/consulta.php");
+        }else if($acc == 'cal'){
+
+        }
+      include("config/disconnect.php");
+    }
+
 }
 include('template/footer.php');
 ?>

@@ -45,6 +45,7 @@
                 <nav class="nav">
                     <div id='cssmenu'>
                     <ul class="sf-menu">
+                       <li><a href='control.php?mod=admin&acc=con'><span>Administracion</span></a></li>
                        <li><a href='#'><span>Inicio</span></a></li>
                        <li class='active has-sub'><a href='#'><span>Acceder</span></a>
                           <ul>
